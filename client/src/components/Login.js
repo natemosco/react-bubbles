@@ -25,7 +25,7 @@ const Login = (props) => {
       .post("/api/login", creds)
       .then(res => {
         console.log(res, "login response");
-        sessionStorage.setItem(res.data.payload);
+        sessionStorage.setItem("token", res.data.payload);
         setCreds({
           username: "",
           password: ""
