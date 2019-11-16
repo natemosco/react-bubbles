@@ -28,10 +28,22 @@ In this project you will create a login page and request a token from the server
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain what a token is used for.
-- [ ] What steps can you take in your web apps to keep your data secure?
-- [ ] Describe how web servers work.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+*  Explain what a token is used for.
+    * token is used to confirm authorized access to the server. It is code that has been encoded with a message and information unique to your account that gets passed to the users computer. It is then stored and referenced for all other requests in order to make sure the user still has authorization.
+*  What steps can you take in your web apps to keep your data secure?
+    * implement a login page
+    * implement private routes that redirect to login without token or some form of auth stored
+    * use session storage over local storage to prevent unwanted long term access to the site.
+    * disable caching
+    * enforce https for deployment
+*  Describe how web servers work.
+    * web servers hold data in tables that are accessible via fetching requests such as a get request. That data can be manipulated with put requests and added too with post requests. Delete data with delete requests. The server responds to the requests sent to it by returning in JSON format a response with the corresponding body of data. This includes the appropriate error messages which help to indicate if the request was incomplete, unauthorized, successful or an error for some other reason.
+*  Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+    * C is the post method
+    * R is get method
+    * U is put method
+    * D is the delete method
+
 
 
 ## Project Set Up
